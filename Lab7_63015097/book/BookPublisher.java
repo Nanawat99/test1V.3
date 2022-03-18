@@ -14,7 +14,7 @@ public class BookPublisher implements Publisher{
 
     @Override
     public void printToFile() {
-        Book book = new Book("Ex_Book", List.of("Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5"));
+        Book book = new Book("Book", List.of("Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5"));
         boolean isEven = false;
         String previousPage = "";
         try {
