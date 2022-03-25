@@ -1,0 +1,1 @@
+[{"ISBN":"9780078022159","Title":"Database System Concepts","Author":"Avi Silberschatz | Henry F. Korth | S. Sudarshan","Publisher":"McGraw Hill"},{"ISBN":"9780201633610","Title":"Design Patterns: Elements of Reusable Object-Oriented Software","Author":"Erich Gamma | Ralph Johnson | John Vlissides | Richard Helm","Publisher":"Addison-Wesley"}]
