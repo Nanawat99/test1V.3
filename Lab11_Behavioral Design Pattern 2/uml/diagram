@@ -1,0 +1,51 @@
+@startuml
+class AgeSortStrategy {
+    +customSort(List<Person> people): void
+}
+class HeightSortStrategy {
+     +customSort(List<Person> people): void
+}
+class WeightSortStrategy {
+     +customSort(List<Person> people): void
+}
+class NameSortStrategy {
+     +customSort(List<Person> people): void
+}
+class People {
+    -members : List<Person>
+    -sortStrategy :
+    +Person()
+    +setSortStrategy(): void
+    +addMember(Person p): void
+    +print(PrintStream out): void
+}
+class Person {
+    -name: String
+    -age: Integer
+    -height: Integer
+    -weight: Integer
+    +getName(): String
+    +setName(String name): void
+    +getAge(): Integer
+    +setAge(Integer age): void
+    +getHeight(): Integer
+    +setHeight(Integer height): void
+    +getWeight(): Integer
+    +setWeight(Integer weight): void
+}
+interface SortStrategy{
+    +customSort(List<Person> people): void
+}
+class Main{}
+Main --> People
+Main -[dashed]-> AgeSortStrategy
+Main -[dashed]-> HeightSortStrategy
+Main -[dashed]-> WeightSortStrategy
+Main -[dashed]-> NameSortStrategy
+People o--> Person
+People o--> SortStrategy
+AgeSortStrategy -[dashed]-|> SortStrategy
+HeightSortStrategy -[dashed]-|> SortStrategy
+WeightSortStrategy -[dashed]-|> SortStrategy
+NameSortStrategy -[dashed]-|> SortStrategy
+@enduml
